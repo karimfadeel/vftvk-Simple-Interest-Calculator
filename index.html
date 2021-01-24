@@ -1,16 +1,62 @@
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+<body>
+
+<div class="bak">
+	<h1>Simple Interest Calculator</h1>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="10%" height="35">&nbsp;</td>
+			<td width="80" height="35">Amount </td>
+			<td width="70%"><input type="number" id="principal"></td>
+		</tr>
+		<tr>
+			<td width="10%" height="35">&nbsp;</td>
+			<td width="20%" height="35">Interest Rate</td>
+			<td width="70%">
+			<input type="range" id="rate" min="1" max="20" value="10.5" step=".5" class="svalue">
+			<span id="rvalue"></span>%</td>
+		</tr>
+		<tr>
+			<td width="10%" height="35">&nbsp;</td>
+			<td width="20%" height="35">No. of Years</td>
+			<td width="70%">
+			<select size="1" type="number" id="years" name="years">
+			<option value="01" selected>01</option>
+			<option value="02">02</option>
+			<option value="03">03</option>
+			<option value="04">04</option>
+			<option value="05">05</option>
+			<option value="06">06</option>
+			<option value="07">07</option>
+			<option value="08">08</option>
+			<option value="09">09</option>
+			<option value="10">10</option>
+			</select> </td>
+		</tr>
+		<tr>
+			<td width="10%" height="35"></td>
+			<td width="20%" height="35"><button onclick="compute()">Compute Interest
+			</button></td>
+			<td width="70%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td height="35" width="10%"></td>
+			<td height="35" colspan="2" width="90%"><span id="resultp"></span>
+			<br>
+			<span id="resultr"></span><br>
+			<span id="result"></span><br>
+			<span id="resultn"></span></td>
+		</tr>
+	</table>
+	<br>
+	<strong>© Everyone Can Get Rich</strong> </div>
+<script src="script.js"></script>
+
+</body>
+
 </html>
